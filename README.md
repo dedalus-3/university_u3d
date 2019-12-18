@@ -1,6 +1,6 @@
 # university_u3d
 Application of theoretical mechanics on the Unity3D engine
-
+Author: Баранов Иван. Студент УрФУ МатМех "Механика и математическое моделирование". 4-ый курс.
 
 В программе приведены следующие модели:
 
