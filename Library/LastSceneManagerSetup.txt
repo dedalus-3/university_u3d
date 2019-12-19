@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/ug.unity
+- path: Assets/scenes/last_release_v1.unity
   isLoaded: 1
   isActive: 1
