@@ -26,8 +26,8 @@ public class Move_other_planet : MonoBehaviour
     {
         r = rb.position - otherPlanet.position;
         R = rb.position;
-        float l = - g * m / Mathf.Pow(r.magnitude, 2);
-        float L = - g * m / Mathf.Pow(R.magnitude, 2);
+        float l = -g * m / Mathf.Pow(r.magnitude, 2);
+        float L = -g * m / Mathf.Pow(R.magnitude, 2);
         rb.AddForce(l * r + L * R);
     }
 }
