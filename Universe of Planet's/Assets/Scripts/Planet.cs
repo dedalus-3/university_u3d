@@ -6,7 +6,7 @@ public class Planet : MonoBehaviour
 {
     private HashSet<Rigidbody> affectedBodies = new HashSet<Rigidbody>();
     private Rigidbody componentRigidbody;
-    float g = 6.67408e-2F;
+    private float g = 6.67408e-2F;
 
     // Start is called before the first frame update
     void Start()
@@ -14,7 +14,7 @@ public class Planet : MonoBehaviour
         componentRigidbody = GetComponent<Rigidbody>();
     }
 
-    private void OnTriggerEnte(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
         if(other.attachedRigidbody != null)
         {
@@ -30,11 +30,11 @@ public class Planet : MonoBehaviour
         }
     }
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         foreach (Rigidbody body in affectedBodies)
         {
-            Vector3 directionToPlanet = (transform.position - body.position).normalized;
+            Vector3 directionToPlanet = transform.position - body.position;
 
             float distance = (transform.position - body.position).magnitude;
             float strenght = g * body.mass * componentRigidbody.mass / Mathf.Pow(distance, 2);

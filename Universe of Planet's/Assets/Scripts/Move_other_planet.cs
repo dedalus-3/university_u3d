@@ -11,7 +11,7 @@ public class Move_other_planet : MonoBehaviour
     private float g = 6.67408e-2F;
     public float m;
     public float M;
-    Rigidbody rb;
+    private Rigidbody rb;
 
     // Start is called before the first frame update
     void Start()
@@ -22,12 +22,12 @@ public class Move_other_planet : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         r = rb.position - otherPlanet.position;
         R = rb.position;
         float l = -g * m / Mathf.Pow(r.magnitude, 2);
-        float L = -g * m / Mathf.Pow(R.magnitude, 2);
+        float L = -g * M / Mathf.Pow(R.magnitude, 2);
         rb.AddForce(l * r + L * R);
     }
 }

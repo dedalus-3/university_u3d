@@ -2,4 +2,3 @@ sceneSetups:
 - path: Assets/Scenes/Last_Release_231219.unity
   isLoaded: 1
   isActive: 1
-  isSubScene: 0
